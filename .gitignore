@@ -1,1 +1,3 @@
 /db_data/
+/migration/
+.env
