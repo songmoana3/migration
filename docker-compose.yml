@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  db:
+    image: mariadb/server:10.3
+    container_name: 'songmoana-migration-gw'
+    ports:
+      - "${DB_PORT}:3306"
+    volumes:
+      - ./db_data:/var/lib/mysql
+      - ./dbconf/conf.d:/etc/mysql/conf.d
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    env_file: ./.env
+    environment:
+      TZ: "Asia/Seoul"
+
