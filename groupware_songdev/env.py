@@ -11,7 +11,7 @@ config = context.config
 
 # alembic.ini 파일에 따로 인스턴스 명시가 되어있지 않는 경우 (custom)
 if not config.get_main_option('sqlalchemy.url'):
-    config.set_section_option('sqlalchemy.url', 'mysql+mysqlconnector://{user_name}:{password}@{host}:{port}/{db_name}'.format(username='songmoana',paossword='0322',host='db',port='3307',db_name ='songmoana-migration'))
+    config.set_main_option('sqlalchemy.url', 'mysql+mysqlconnector://{username}:{password}@{host}:{port}/{db_name}'.format(username='suprauser',password='supra',host='192.168.0.38',port='3307',db_name ='markcloud-service'))
     
 
 
